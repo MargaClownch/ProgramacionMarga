@@ -8,7 +8,7 @@ El objetivo principal es aprender los fundamentos de la programación estructura
 ## 🧠 Objetivos del curso
 
 - Comprender los conceptos básicos de la programación.
-- Desarrollar programas funcionales en diferentes lenguajes (principalmente **Java** y **Python**).
+- Desarrollar programas funcionales en diferentes lenguajes (principalmente **Java**).
 - Aplicar estructuras de control, funciones, clases y objetos.
 - Fomentar el pensamiento lógico y la resolución de problemas.
 - Aprender a usar **Git** y **GitHub** para el control de versiones y trabajo colaborativo.
@@ -17,10 +17,9 @@ El objetivo principal es aprender los fundamentos de la programación estructura
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Lenguajes:** Java, Python, HTML/CSS (según el tema)
-- **Entornos de desarrollo:** Visual Studio Code, IntelliJ IDEA, Eclipse
+- **Lenguajes:** Java
+- **Entornos de desarrollo:** Visual Studio Code, IntelliJ IDEA
 - **Control de versiones:** Git & GitHub
-- **Otros:** Markdown, UML, Terminal
 
 ---
 
