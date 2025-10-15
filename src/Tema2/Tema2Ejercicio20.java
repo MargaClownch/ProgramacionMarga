@@ -10,12 +10,12 @@ public class Tema2Ejercicio20 {
         int primer = sc.nextInt();
         System.out.println("Introduce el segundo número: ");
         int segundo = sc.nextInt();
-
-         for (int i = 1; i < segundo; i++){
-             if (i%2==0){
-                 System.out.println(i);
-             }
-         }
-
+        if (primer<segundo) {
+            for (int i = segundo; i >= primer; i--) {
+                if (i % 2 == 1) {
+                    System.out.println(i);
+                }
+            }
+        }
     }
 }
