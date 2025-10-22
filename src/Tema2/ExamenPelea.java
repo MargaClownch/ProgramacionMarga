@@ -47,7 +47,7 @@ public class ExamenPelea {
             System.out.println("Presiona cualquier tecla para pelear!!");
             sc.nextLine();
             String siguiente = sc.nextLine();
-            while (vida>=0||vidaIA>=0){
+            while (vida >0 && vidaIA >0){
                 if (velocidad > velocidadIA) {
                     System.out.println("Atacas al rival");
                     vidaIA = (vidaIA - (ataque - defensaIA));
@@ -57,13 +57,23 @@ public class ExamenPelea {
                     System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                     System.out.println("Presiona cualquier tecla para pelear!!");
                     sc.nextLine();
-                    String siguiente1= sc.nextLine();                }else System.out.println("El rival te ataca");
+                    String siguiente1= sc.nextLine();
+                }else System.out.println("El rival te ataca");
                 vida = (vida - (ataqueIA - defensa));
                 System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                 System.out.println("Atacas al rival");
                 vidaIA = (vidaIA - (ataque - defensaIA));
                 System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
+                System.out.println("Presiona cualquier tecla para pelear!!");
+                sc.nextLine();
+                String siguiente1= sc.nextLine();
             }
+            if (vida>vidaIA){
+                System.out.println("Has ganado!!");
+                fin = true;
+            }else
+                System.out.println("Nadie se esperaba que ganases");
+            fin = true;
         }
 
     }
