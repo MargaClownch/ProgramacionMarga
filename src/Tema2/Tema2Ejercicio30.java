@@ -9,15 +9,40 @@ import java.util.Random;
 public class Tema2Ejercicio30 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingresa el primer número, Para salir ingresa #: ");
-        double num1 = sc.nextDouble();
-        System.out.print("Ingresa el operador (+, -, *, /) : ");
-        String operador = sc.next();
-        System.out.print("Ingresa el segundo número : ");
-        double num2 = sc.nextDouble();
         double resultado = 0;
+        boolean salir = false;
 
+        while (!salir){
+            System.out.println("Ingresa el primer número: ");
+            double num1 = sc.nextDouble();
+            System.out.println("Ingresa el segundo número : ");
+            double num2 = sc.nextDouble();
+            System.out.println("Ingresa el operador (+, -, *, /) Para salir escribe salir : ");
+            sc.nextLine();
+            String operador = sc.nextLine();
 
+        switch (operador) {
+            case "+":
+                resultado = num1 + num2;
+                System.out.println(resultado);
+                break;
+            case "-":
+                resultado = num1 - num2;
+                System.out.println(resultado);
+                break;
+            case "*":
+                resultado = num1 * num2;
+                System.out.println(resultado);
+                break;
+            case "/":
+                resultado = num1 / num2;
+                System.out.println(resultado);
+                break;
+            case "salir":
+                salir = true;
+                break;
+            }
+        }
     }
 }
 
