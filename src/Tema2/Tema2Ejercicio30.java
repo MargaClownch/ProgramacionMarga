@@ -16,40 +16,8 @@ public class Tema2Ejercicio30 {
         System.out.print("Ingresa el segundo número : ");
         double num2 = sc.nextDouble();
         double resultado = 0;
-        boolean salida = true;
 
-        while (salida==true){
-            if (num1<0) {
-                salida = false;
-            } else if (num2<=0) {
-                salida = false;
 
-            }else
-            switch (operador) {
-                case "+":
-                    resultado = num1 + num2;
-                    break;
-                case "-":
-                    resultado = num1 - num2;
-                    break;
-                case "*":
-                    resultado = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 != 0) {
-                        resultado = num1 / num2;
-                    } else {
-                        System.out.println("Error: División por cero.");
-                        return; // Termina el programa
-                    }
-                    break;
-                default:
-                    System.out.println("Operador no válido.");
-                    return; // Termina si el operador es inválido
-            }
-
-            System.out.println("Resultado: " + resultado);
-
-        }
     }
 }
+
