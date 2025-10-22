@@ -11,10 +11,11 @@ public class ExamenPelea {
         int ataqueIA = 100;
         int velocidadIA = 100;
         int defensaIA = 100;
-        int vida= 0;
-        int ataque= 0;
+        int vida = 0;
+        int ataque = 0;
         int velocidad = 0;
         int defensa = 0;
+        double factor = 0.8 + randy.nextDouble() * 0.4;
 
         while (!fin) {
             System.out.println("Introduce la vida (1-200): ");
@@ -50,19 +51,19 @@ public class ExamenPelea {
             while (vida >0 && vidaIA >0){
                 if (velocidad > velocidadIA) {
                     System.out.println("Atacas al rival");
-                    vidaIA = (vidaIA - (ataque - defensaIA));
+                    vidaIA = (vidaIA - ((ataque) - (defensaIA/2)));
                     System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                     System.out.println("El rival te ataca");
-                    vida = (vida - (ataqueIA - defensa));
+                    vida = (vida - (ataqueIA - (defensa/2)));
                     System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                     System.out.println("Presiona cualquier tecla para pelear!!");
                     sc.nextLine();
                     String siguiente1= sc.nextLine();
                 }else System.out.println("El rival te ataca");
-                vida = (vida - (ataqueIA - defensa));
+                vida = (vida - (ataqueIA - (defensa/2)));
                 System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                 System.out.println("Atacas al rival");
-                vidaIA = (vidaIA - (ataque - defensaIA));
+                vidaIA = (vidaIA - (ataque - (defensaIA/2)));
                 System.out.println("Tu vida: " + vida + " Vida de tu rival: " + vidaIA);
                 System.out.println("Presiona cualquier tecla para pelear!!");
                 sc.nextLine();
@@ -75,6 +76,5 @@ public class ExamenPelea {
                 System.out.println("Nadie se esperaba que ganases");
             fin = true;
         }
-
     }
 }
