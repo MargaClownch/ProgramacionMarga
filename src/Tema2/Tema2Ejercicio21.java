@@ -9,6 +9,6 @@ public class Tema2Ejercicio21 {
                 contador = contador + i;
             }
         }
-        System.out.println(contador);
+        System.out.println("La suma de todos los pares es: " + contador);
     }
 }

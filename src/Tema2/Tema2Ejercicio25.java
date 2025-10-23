@@ -11,11 +11,11 @@ public class Tema2Ejercicio25 {
         int factorial =1;
 
         if (num<0){
-            System.out.println("Introduce un número positivo");
+            System.out.println("ERROR Introduce un número positivo");
         } else
             for (int i = 1; i<=num; i++){
                 factorial = factorial * i;
+                System.out.println("El factorial de: " + num + " es " + factorial);
             }
-        System.out.println("El factorial de: " + num + " es " + factorial);
     }
 }

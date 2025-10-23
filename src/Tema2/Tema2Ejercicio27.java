@@ -6,10 +6,10 @@ public class Tema2Ejercicio27 {
     public static void main(String[] args) {
     int contador = 0;
     int numero = 2;
-
+    boolean esPrimo;
 
         while (contador<=20) {
-            boolean esPrimo = true;
+            esPrimo = true;
             for (int i = 2; i * i <= numero; i++) {
                 if (numero % i == 0) {
                     esPrimo = false;
