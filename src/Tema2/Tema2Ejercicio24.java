@@ -16,12 +16,13 @@ public class Tema2Ejercicio24 {
             if (nota>=5){
                 apro++;
             }else
-                sus++;
+                if(nota>0 && nota<5)
+                    sus++;
         }
         while (nota>=0);
 
         System.out.println("Hay "+ apro + "aprobados!");
-        System.out.println("Hay "+ (sus-1) + "suspendidos...");
+        System.out.println("Hay "+ (sus) + "suspendidos...");
         }
     }
 

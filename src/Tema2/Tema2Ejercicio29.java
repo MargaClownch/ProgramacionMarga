@@ -16,10 +16,14 @@ public class Tema2Ejercicio29 {
 
         while (num!=randomInt){
             num = sc.nextInt();
-           if (num!=randomInt){
-               System.out.println("Has fallado perro");
-           }else
-               System.out.println("Has ganado!!!");
+           if (num < randomInt){
+               System.out.println("El número es mayor");
+
+           }
+           else if(num > randomInt) {
+               System.out.println("El número es menor");
+           } else
+               System.out.println("Has acertado!!!");
         }
     }
 }

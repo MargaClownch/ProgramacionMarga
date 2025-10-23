@@ -12,16 +12,17 @@ public class Tema2Ejercicio26 {
         if (num <= 1) {
             esPrimo = false;
         } else
-            for (int i = 2; i * i <= num; i++) {
+            for (int i = 2; i < num; i++) {
                 if (num % i == 0) {
                     esPrimo = false;
                 }
-                if (esPrimo) {
-                    System.out.println(num + " es un número primo.");
-                } else {
-                    System.out.println(num + " no es un número primo.");
-                }
+
             }
+        if (esPrimo) {
+            System.out.println(num + " es un número primo.");
+        } else {
+            System.out.println(num + " no es un número primo.");
+        }
     }
 }
 

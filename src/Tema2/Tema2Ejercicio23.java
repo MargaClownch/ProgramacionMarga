@@ -10,6 +10,7 @@ public class Tema2Ejercicio23 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce la nota para hacer la media o un número negativo para salir: ");
         double nota;
+
         do {
             nota = sc.nextDouble();
             if (nota>=0){
