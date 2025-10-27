@@ -59,9 +59,19 @@ public class ExamenPelea {
             sc.nextLine();
             String siguiente = sc.nextLine();
             while (vidaMax > 0 && vidaIA > 0) {
+                int variacion = randy.nextInt(21) - 10;
+                int danio = ataque + (ataque * variacion / 100) - defensaIA;
+                int danioIA = ataque - defensa;
+                int ataqueReal = ataque + (ataque * variacion / 100);
+                if (danio < 5) {
+                    danio = 5;
+                }
+                if (danioIA > 5) {
+                    danioIA = 5;
+                }
                 if (velocidad > velocidadIA) {
                     System.out.println("Atacas al rival");
-                    vidaIA = (vidaIA - ((ataque + randy.nextInt(20)) - (defensaIA/2)));
+                    vidaIA = (vidaMax - ((ataque + (ataque * randy.nextInt(21) - 10)/100)- defensaIA));
                     if (vidaIA < 0) {
                         vidaIA = 0;
                     }
@@ -70,7 +80,7 @@ public class ExamenPelea {
                     }
                     System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                     System.out.println("El rival te ataca");
-                    vidaMax = (vidaMax - ((ataqueIA + randy.nextInt(20) - (defensa/2))));
+                    vidaMax = (vidaMax - ((ataqueIA + (ataqueIA * randy.nextInt(21) - 10)/100)- defensa));
                     if (vidaIA < 0) {
                         vidaIA = 0;
                     }
@@ -81,7 +91,7 @@ public class ExamenPelea {
                     System.out.println("Presiona cualquier tecla para pelear!!");
                     String siguiente1 = sc.nextLine();
                 } else System.out.println("El rival te ataca");
-                vidaMax = (vidaMax - ((ataqueIA + randy.nextInt(20)  - (defensa/2))));
+                vidaMax = (vidaMax - ((ataqueIA + (ataqueIA * randy.nextInt(21) - 10)/100)- defensa));
                 if (vidaIA < 0) {
                     vidaIA = 0;
                 }
@@ -90,7 +100,7 @@ public class ExamenPelea {
                 }
                 System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                 System.out.println("Atacas al rival");
-                vidaIA = (vidaIA - ((ataque + randy.nextInt(20) - (defensaIA/2))));
+                vidaIA = (vidaMax - ((ataque + (ataque * randy.nextInt(21) - 10)/100)- defensaIA));
                 if (vidaIA < 0) {
                     vidaIA = 0;
                 }
