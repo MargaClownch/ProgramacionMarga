@@ -24,7 +24,7 @@ public class Pelea {
             velocidadIA = total - (vidaIA + defensaIA + ataqueIA);
         } while (velocidadIA < 50 || velocidadIA > 200);
 
-        while (vidaMax + ataque + velocidad + defensa != 500) {
+        while (vidaMax + ataque + velocidad + defensa != 500 || vidaMax > 200 || ataque > 200 || velocidad > 200 || defensa > 200) {
             System.out.println("Tus atributos deben sumar 500.");
             System.out.println("Cada atributo debe estar entre 1 y 200.");
 
