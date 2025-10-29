@@ -17,12 +17,16 @@ public class Pelea {
         int velocidad = 0;
         int defensa = 0;
 
+        // Se eligen de forma aleatoria los atributos de la IA, haciendo que tenga mínimo 50 puntos en cada atributo
+
         do {
             vidaIA = 50 + randy.nextInt(151);
             defensaIA = 50 + randy.nextInt(151);
             ataqueIA = 50 + randy.nextInt(151);
             velocidadIA = total - (vidaIA + defensaIA + ataqueIA);
         } while (velocidadIA < 50 || velocidadIA > 200);
+
+        // Bucle que te pide los atributos hasta que introduces la cantidad correcta
 
         while (vidaMax + ataque + velocidad + defensa != 500 || vidaMax > 200 || ataque > 200 || velocidad > 200 || defensa > 200) {
             System.out.println("Tus atributos deben sumar 500.");
@@ -47,6 +51,8 @@ public class Pelea {
             }
         }
 
+        // Se crean las variables que van a mantener la vida original em la barra de vida
+
         int vidaMaxOriginal = vidaMax;
         int vidaIAOriginal = vidaIA;
         System.out.println("Tu vida es: " + vidaMax + " La vida de tu rival es: " + vidaIA);
@@ -59,9 +65,13 @@ public class Pelea {
         sc.nextLine();
         sc.nextLine();
 
+        // Bucle de combate que para cuando la vida de alguno de los jugadores llegue a 0
+
         while (vidaMax > 0 && vidaIA > 0) {
             int danio = ataque - defensaIA;
             int danioIA = ataqueIA - defensa;
+
+            // Barra de vida del jugador
 
             System.out.println("\n" + "=".repeat(40));
 
@@ -76,6 +86,8 @@ public class Pelea {
             barraJugador = barraJugador + "]";
             System.out.println("Tú:      " + barraJugador + " " + vidaMax + "/" + vidaMaxOriginal);
 
+            // Barra de vida del rival
+
             String barraRival = "[";
             int bloquesLlenosR = (int) Math.round((double) vidaIA / vidaIAOriginal * 20);
             for (int i = 0; i < bloquesLlenosR; i++) {
@@ -88,6 +100,8 @@ public class Pelea {
             System.out.println("Rival:   " + barraRival + " " + vidaIA + "/" + vidaIAOriginal);
 
             System.out.println("=".repeat(40));
+
+            // Condición de quién ataca primero basado en la velocidad
 
             if (velocidad > velocidadIA) {
                 System.out.println("¡Tú atacas al rival!");
@@ -139,6 +153,8 @@ public class Pelea {
             sc.nextLine();
         }
 
+        // Se vuelve a mostrar la barra de vida fuera del bucle de combate
+
         System.out.println("\n" + "=".repeat(40));
         String barraFinalJ = "[";
         int llenosJ = (int) Math.round((double) vidaMax / vidaMaxOriginal * 20);
@@ -154,6 +170,8 @@ public class Pelea {
         barraFinalR += "]";
         System.out.println("Rival:   " + barraFinalR + " " + vidaIA + "/" + vidaIAOriginal);
         System.out.println("=".repeat(40));
+
+        // Mensaje de quién ha ganado
 
         if (vidaMax > 0) {
             System.out.println("¡Has ganado la batalla!");
