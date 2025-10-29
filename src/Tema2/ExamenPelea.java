@@ -39,16 +39,16 @@ public class ExamenPelea {
             if (vidaMax + ataque + velocidad + defensa > 500) {
                 System.out.println("Has superado el límite de atributos permitidos (500)");
                 if (vidaMax > 200) {
-                    System.out.println("Has superado el límite de atributos permitidos (200)");
+                    System.out.println("Has superado el límite de Vida permitida (200)");
                 }
                 if (ataque > 200) {
-                    System.out.println("Has superado el límite de atributos permitidos (200)");
+                    System.out.println("Has superado el límite de ataque permitido (200)");
                 }
                 if (velocidad > 200) {
-                    System.out.println("Has superado el límite de atributos permitidos (200)");
+                    System.out.println("Has superado el límite de velocidad permitida (200)");
                 }
                 if (defensa > 200) {
-                    System.out.println("Has superado el límite de atributos permitidos (200)");
+                    System.out.println("Has superado el límite de defensa permitida (200)");
                 }
 
             }
@@ -84,7 +84,7 @@ public class ExamenPelea {
 
 
                     System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
-                    System.out.println("Presiona cualquier tecla para pelear!!");
+                    System.out.println("Presiona ENTER para pelear!!");
                     String siguiente1 = sc.nextLine();
                 } else System.out.println("El rival te ataca");
                 if (danioIA <= 0) {
@@ -103,7 +103,7 @@ public class ExamenPelea {
                 if (vidaIA < 0) vidaIA = 0;
 
                 System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
-                System.out.println("Presiona cualquier tecla para pelear!!");
+                System.out.println("Presiona ENTER para pelear!!");
                 String siguiente2 = sc.nextLine();
 
             if (vidaMax > vidaIA) {
