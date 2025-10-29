@@ -2,7 +2,7 @@ package Tema2;
 import java.util.Scanner;
 import java.util.Random;
 
-public class ExamenPelea {
+public class PeleaSucio {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random randy = new Random();
