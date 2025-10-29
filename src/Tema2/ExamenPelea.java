@@ -25,7 +25,8 @@ public class ExamenPelea {
         } while (velocidadIA < 50 || velocidadIA > 200);
 
 
-        while (!fin) {
+        while (vidaMax + ataque + velocidad + defensa != 500) {
+            System.out.println("Tus atributos tienen que sumar 500 en total");
             System.out.println("Introduce la vida (1-200): ");
             vidaMax = sc.nextInt();
             System.out.println("Introduce el ataque (1-200): ");
@@ -49,7 +50,9 @@ public class ExamenPelea {
                 if (defensa > 200) {
                     System.out.println("Has superado el límite de atributos permitidos (200)");
                 }
+
             }
+        }
             System.out.println("Tu vida es: " + vidaMax + " La vida de tu rival es: " + vidaIA);
             System.out.println("Tu ataque es: " + ataque + " El ataque de tu rival es: " + ataqueIA);
             System.out.println("Tu velocidad es: " + velocidad + " La velocidad de tu rival es: " + velocidadIA);
@@ -59,63 +62,55 @@ public class ExamenPelea {
             sc.nextLine();
             String siguiente = sc.nextLine();
             while (vidaMax > 0 && vidaIA > 0) {
-                int variacion = randy.nextInt(21) - 10;
-                int danio = ataque + (ataque * variacion / 100) - defensaIA;
-                int danioIA = ataque - defensa;
-                int ataqueReal = ataque + (ataque * variacion / 100);
-                if (danio < 5) {
-                    danio = 5;
-                }
-                if (danioIA > 5) {
-                    danioIA = 5;
-                }
+                int danio = ataque - defensaIA;
+                int danioIA = ataqueIA - defensa;
+
                 if (velocidad > velocidadIA) {
                     System.out.println("Atacas al rival");
-                    vidaIA = (vidaMax - ((ataque + (ataque * randy.nextInt(21) - 10)/100)- defensaIA));
-                    if (vidaIA < 0) {
-                        vidaIA = 0;
-                    }
-                    if (vidaMax < 0){
-                        vidaMax = 0;
-                    }
+                    if (danio <= 0) {
+                        vidaIA -= 5;
+                    } else
+                        vidaIA -= danio;
+                    if (vidaIA < 0) vidaIA = 0;
+
+
                     System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                     System.out.println("El rival te ataca");
-                    vidaMax = (vidaMax - ((ataqueIA + (ataqueIA * randy.nextInt(21) - 10)/100)- defensa));
-                    if (vidaIA < 0) {
-                        vidaIA = 0;
-                    }
-                    if (vidaMax < 0){
-                        vidaMax = 0;
-                    }
+                    if (danioIA <= 0) {
+                        vidaMax -= 5;
+                    } else
+                        vidaMax -= danioIA;
+                    if (vidaMax < 0) vidaMax = 0;
+
+
                     System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                     System.out.println("Presiona cualquier tecla para pelear!!");
                     String siguiente1 = sc.nextLine();
                 } else System.out.println("El rival te ataca");
-                vidaMax = (vidaMax - ((ataqueIA + (ataqueIA * randy.nextInt(21) - 10)/100)- defensa));
-                if (vidaIA < 0) {
-                    vidaIA = 0;
-                }
-                if (vidaMax < 0){
-                    vidaMax = 0;
-                }
+                if (danioIA <= 0) {
+                    vidaMax -= 5;
+                } else
+                    vidaMax -= danioIA;
+                if (vidaMax < 0) vidaMax = 0;
+
+
                 System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                 System.out.println("Atacas al rival");
-                vidaIA = (vidaMax - ((ataque + (ataque * randy.nextInt(21) - 10)/100)- defensaIA));
-                if (vidaIA < 0) {
-                    vidaIA = 0;
-                }
-                if (vidaMax < 0){
-                    vidaMax = 0;
-                }
+                if (danio <= 0) {
+                    vidaIA -= 5;
+                }else
+                    vidaIA -= danio;
+                if (vidaIA < 0) vidaIA = 0;
+
                 System.out.println("Tu vida: " + vidaMax + " Vida de tu rival: " + vidaIA);
                 System.out.println("Presiona cualquier tecla para pelear!!");
-                String siguiente1 = sc.nextLine();
-            }
+                String siguiente2 = sc.nextLine();
+
             if (vidaMax > vidaIA) {
                 System.out.println("Has ganado!!");
             } else
                 System.out.println("Nadie se esperaba que ganases");
-            fin = true;
         }
     }
 }
+
