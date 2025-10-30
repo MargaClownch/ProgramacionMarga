@@ -105,6 +105,9 @@ public class Pelea {
 
             if (velocidad > velocidadIA) {
                 System.out.println("¡Tú atacas al rival!");
+
+                // Sí la defensa supera al ataque siempre se hará como mínimo 5 de daño
+
                 if (danio <= 0) {
                     vidaIA = vidaIA - 5;
                     System.out.println("  Daño infligido mínimo: 5");
@@ -112,6 +115,9 @@ public class Pelea {
                     vidaIA = vidaIA - danio;
                     System.out.println("  Daño infligido: " + danio);
                 }
+
+                // Sí la vida es menor que 0 se transforma en 0 para que quede más bonito
+
                 if (vidaIA < 0) vidaIA = 0;
 
                 if (vidaIA > 0) {
