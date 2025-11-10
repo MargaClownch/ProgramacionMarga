@@ -18,12 +18,12 @@ public class Tema3Ejercicio3 {
     }
 
     public static double calculateCirclePerimeter(double radius){
-        double perimeter = 2*Math.PI*radius;
-        return perimeter;
+        return 2*Math.PI*radius;
+
     }
     public static double calculateCircleArea(double radius){
-        double area = Math.PI*(radius*radius);
-        return area;
+        return Math.PI*(radius*radius);
+
     }
 
     public static void main(String[] args) {
