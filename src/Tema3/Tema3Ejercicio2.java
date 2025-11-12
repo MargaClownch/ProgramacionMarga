@@ -24,7 +24,7 @@ public class Tema3Ejercicio2 {
             age = sc.nextInt();
         }
         if (adulto == true){
-            System.out.println("Eres mayo de edad");
+            System.out.println("Eres mayoh de edad");
         } else if (adulto == false) {
             System.out.println("Ereh menoh");
         }
