@@ -20,9 +20,10 @@ public class Tema3Ejercicio1 {
     Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce un numero: ");
-        int isPositive = numberSign(sc.nextInt());
+        int numero = sc.nextInt();
+        int isPositive = numberSign(numero);
         if (isPositive == -1){
-            System.out.println("No es positivo");
+            System.out.println("negativo");
         }else if (isPositive == 0){
             System.out.println("0");
         }else  if (isPositive == 1){

@@ -17,7 +17,7 @@ public class Tema3Ejercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
+//meterlo en un procedmiento
         System.out.println("a) Muestra el signo de un número introducido por el usuario.\n" +
                 "b) Indica si el usuario es mayor de edad o no.\n" +
                 "c) Calcula el área y perímetro de un círculo.\n" +
@@ -31,14 +31,14 @@ public class Tema3Ejercicio10 {
         switch(selector){
                 case 'a':
                     System.out.println("Introduce un numero: ");
-                int isPositive = Tema3Ejercicio1.numberSign(sc.nextInt());
-                if (isPositive == -1){
-                    System.out.println("No es positivo");
-                }else if (isPositive == 0){
-                    System.out.println("0");
-                }else  if (isPositive == 1){
-                    System.out.println("Positivo");
-                } break;
+                    int isPositive = Tema3Ejercicio1.numberSign(sc.nextInt());
+                    if (isPositive == -1){
+                        System.out.println("No es positivo");
+                    }else if (isPositive == 0){
+                        System.out.println("0");
+                    }else  if (isPositive == 1){
+                        System.out.println("Positivo");
+                    } break;
                 case 'b':
                     System.out.println("Introduce la edad: ");
                     int age = sc.nextInt();

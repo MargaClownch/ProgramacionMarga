@@ -32,7 +32,7 @@ public class Tema3Ejercicio3 {
         double radio = sc.nextDouble();
         boolean valido = validRadius(radio);
 
-        while (valido == true){
+        while (valido){
             System.out.println("Introduce un radio");
             radio = sc.nextDouble();
             valido = validRadius(radio);

@@ -16,6 +16,7 @@ public class Tema3Ejercicio4 {
     public static double dollar2euro(double moneda){
         return moneda*0.85;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         showMenu();

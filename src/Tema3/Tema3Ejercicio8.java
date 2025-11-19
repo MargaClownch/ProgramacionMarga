@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Tema3Ejercicio8 {
     public static void fecha(int dia, int mes, int ano){
+        //comrpobar febrero y los meses que tiene  30 o 31
         if(dia<1 || dia>31){
             System.out.println("Día incorrecto");
         }

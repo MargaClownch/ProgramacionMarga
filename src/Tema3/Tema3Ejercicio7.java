@@ -25,7 +25,9 @@ public class Tema3Ejercicio7 {
         Scanner sc = new Scanner(System.in);
         int cerrar = 1;
         int numero = 0;
-        while (cerrar != 0) {
+        //pèdir aqui el num al usuario
+        while (cerrar != 0) {//si no es 0, entro
+            //comprobar que no sea negativo
             System.out.println("Digite un numero: ");
             primo(sc.nextInt());
             System.out.println("Pulse 1 para continuar o 0 para salir: ");
