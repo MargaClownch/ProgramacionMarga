@@ -13,6 +13,8 @@ package Tema3;
 
 import java.util.Scanner;
 
+import static Tema3.Tema3Ejercicio1.numberSign;
+
 public class Tema3Ejercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,7 +33,7 @@ public class Tema3Ejercicio10 {
         switch(selector){
                 case 'a':
                     System.out.println("Introduce un numero: ");
-                    int isPositive = Tema3Ejercicio1.numberSign(sc.nextInt());
+                    int isPositive = numberSign(sc.nextInt());
                     if (isPositive == -1){
                         System.out.println("No es positivo");
                     }else if (isPositive == 0){
@@ -42,7 +44,7 @@ public class Tema3Ejercicio10 {
                 case 'b':
                     System.out.println("Introduce la edad: ");
                     int age = sc.nextInt();
-                    isPositive = Tema3Ejercicio1.numberSign(age);
+                    isPositive = numberSign(age);
                     boolean adulto = Tema3Ejercicio2.isAdult(age);
                     if (isPositive == -1){
                         System.out.println("Introduce un numero positivo: ");

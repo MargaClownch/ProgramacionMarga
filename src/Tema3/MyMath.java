@@ -3,6 +3,7 @@ package Tema3;
 import java.util.Scanner;
 
 public class MyMath {
+// EJ1
     public static double squarePerimeter(double lado) {
         return lado * 4;
     }
@@ -27,7 +28,7 @@ public class MyMath {
     public static double circleArea(double radio) {
         return Math.PI * (radio * radio);
     }
-
+// EJ2
     public static String esPrimo(int primo) {
         boolean esPrimo = true;
         if (primo <= 1) {
@@ -44,7 +45,7 @@ public class MyMath {
         } else
             return "No es primo";
     }
-
+// EJ3
     public static int numDigits(int num) {
         int cifras = 1;
         Scanner sc = new Scanner(System.in);
@@ -54,7 +55,7 @@ public class MyMath {
         }
         return num;
     }
-
+// EJ4
     public static int numPares(int num) {
         if (num == 0) {
             return 1;
@@ -72,7 +73,7 @@ public class MyMath {
         }
         return contadorPares;
     }
-
+// EJ5
     public static int numImpar(int num) {
         int contadorImpares = 0;
         int digitoActual;
@@ -87,7 +88,7 @@ public class MyMath {
         }
         return contadorImpares;
     }
-
+// EJ6
     public static int calcFactorial(int num) {
         int factorial = 1;
 
@@ -96,12 +97,26 @@ public class MyMath {
         }
         return factorial;
     }
-
+// EJ7
     public static int calcFactorialRecursive(int num) {
         if (num == 0 || num == 1) {
             return 1;
         }
         return num * calcFactorialRecursive(num - 1);
     }
-    public static int calcEquation
+// EJ8
+    public static int calcEquation(double a, double b, double c) {
+        return 0;
+    }
+// EJ9
+    public static int DigitSum(int digito) {
+        int sum = 0;
+        while (digito > 0) {
+            sum += digito % 10;
+            digito /= 10;
+        }
+        return sum;
+    }
 }
+
+
