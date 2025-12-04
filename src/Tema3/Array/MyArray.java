@@ -31,4 +31,7 @@ public class MyArray {
         }
         return sum/arr.length;
     }
+    public static int arrayCheck(int arr []){
+        return 0;
+    }
 }

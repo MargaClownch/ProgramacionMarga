@@ -27,6 +27,9 @@ public class Tema3MyMathMenu {
                 case 2:
                     System.out.println("Introduce un número y te diré sí es primo!!");
                     System.out.println(esPrimo(sc.nextInt()));
+                    if(esPrimo(sc.nextInt())){
+                        System.out.println("Es primo");
+                    }
                     break;
                 case 3:
                     System.out.println("Introduce un número y te diré cuántos digitos tiene: ");
@@ -42,6 +45,7 @@ public class Tema3MyMathMenu {
                     break;
                 case 6:
                     System.out.println("Introduce un numero y te calculo el factorial, no te pases de 10 que me petas el pc: ");
+
                     System.out.println("El factorial es " + calcFactorial(sc.nextInt()));
                     break;
                 case 7:

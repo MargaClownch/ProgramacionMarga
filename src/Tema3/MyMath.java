@@ -29,21 +29,20 @@ public class MyMath {
         return Math.PI * (radio * radio);
     }
 // EJ2
-    public static String esPrimo(int primo) {
+    public static boolean esPrimo(int primo) {
         boolean esPrimo = true;
         if (primo <= 1) {
             esPrimo = false;
+            return esPrimo;
         } else
             for (int i = 2; i < primo; i++) {
                 if (primo % i == 0) {
                     esPrimo = false;
+                    return esPrimo;
                 }
 
-            }
-        if (esPrimo) {
-            return "Es Primo";
-        } else
-            return "No es primo";
+            }return esPrimo;
+
     }
 // EJ3
     public static int numDigits(int num) {
@@ -106,8 +105,14 @@ public class MyMath {
     }
 // EJ8
     public static int calcEquation(double a, double b, double c) {
-        return 0;
-    }
+        double d = b*2 - 4*a*c;
+        if(d>0){
+            return 2;}
+        else if(d<0){
+            return 1;}
+            else
+                return 0;
+        }
 // EJ9
     public static int DigitSum(int digito) {
         int sum = 0;
