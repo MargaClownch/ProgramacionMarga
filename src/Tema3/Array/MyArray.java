@@ -76,13 +76,13 @@ public class MyArray {
             arr[j] = auxiliar;
         }
     }
-    public static int arrayCapicua(int arr []){
-        return 0;
+    public static boolean arrayCapicua(int arr []) {
+        for (int i = 0; i < arr.length / 2; i++) {
+            int j = arr.length - 1 - i;
+            if (arr[i] != arr[j]) {
+                return false;
+            }
+        }
+        return true;
     }
-    public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
-        arrayInvProcedimiento(arr);
-        System.out.println(Arrays.toString(arr));
-    }
-
 }
