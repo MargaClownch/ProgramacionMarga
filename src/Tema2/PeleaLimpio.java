@@ -24,7 +24,6 @@ public class PeleaLimpio {
         int velocidad = statsJugador[2];
         int defensa = statsJugador[3];
 
-        // Variables para recordar la vida original (para las barras)
         int vidaMaxOriginal = vidaMax;
         int vidaIAOriginal = vidaIA;
 
