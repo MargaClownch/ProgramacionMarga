@@ -34,10 +34,11 @@ public class Reloj {
             System.out.println("Hora: " + (this.hora-12) + "PM");
             System.out.println("Minuto: " + this.minuto + "PM");
             System.out.println("Segundo: " + this.segundo + "PM");
-        }else
+        }else{
             System.out.println("Hora: " + this.hora + "AM");
             System.out.println("Minuto: " + this.minuto + "AM");
             System.out.println("Segundo: " + this.segundo + "AM");
+        }
     }
     @Override
     public String toString(){
