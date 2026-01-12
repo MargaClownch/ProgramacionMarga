@@ -15,7 +15,7 @@ public class Reloj {
         this.hora = HORABASE;
         this.minuto = MINUTOBASE;
         this.segundo = SEGUNDOBASE;
-        this.ampm=AMPMBASE;
+        this.ampm = AMPMBASE;
     }
     public Reloj(int hora, int minuto, int segundo, boolean ampm) {
         this.hora = hora;
@@ -31,7 +31,7 @@ public class Reloj {
             System.out.println("Segundo: " + this.segundo);
         }
         else if (this.hora > 12) {
-            System.out.println("Hora: " + this.hora + -12 + "PM");
+            System.out.println("Hora: " + (this.hora-12) + "PM");
             System.out.println("Minuto: " + this.minuto + "PM");
             System.out.println("Segundo: " + this.segundo + "PM");
         }else

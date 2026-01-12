@@ -7,6 +7,5 @@ public class RelojMain {
         System.out.println("La hora es: " + reloj.getHora());
         System.out.println("La hora toString es: " + reloj);
         reloj.showHora();
-
     }
 }
