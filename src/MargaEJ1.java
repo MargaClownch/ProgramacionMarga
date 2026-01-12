@@ -75,12 +75,5 @@ public class MargaEJ1 {
         }
         while (menu !=3);
 
-
-
-
-
-
-
-
     }
 }
