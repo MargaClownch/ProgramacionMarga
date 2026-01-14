@@ -9,6 +9,8 @@ public class Hero {
     private int experience;
     private int attack;
     private int defense;
+    public static final int POTIONHEALING = 10;
+    public static final int RESTHEALING = 50;
     // Constructores
     public Hero(){
 
@@ -21,5 +23,18 @@ public class Hero {
         this.experience = experience;
         this.attack = attack;
         this.defense = defense;
+    }
+    // Métodos
+    public int drinkPotion(){
+        return this.health + POTIONHEALING;
+    }
+    public int rest(){
+        return this.health + RESTHEALING;
+    }
+    public String toString(){
+        return name + " " + level + " " + health + " " + maxHealth + " " + experience + " " + attack + " " + defense;
+    }
+    public void attack(Hero h){
+
     }
 }
