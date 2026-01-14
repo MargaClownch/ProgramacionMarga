@@ -2,7 +2,7 @@ package Tema4;
 
 public class Persona {
     // Atributos
-    private String dni;
+    private final String dni;
     private String nombre;
     private String apellido;
     private int edad;
@@ -50,16 +50,9 @@ public class Persona {
             System.out.println("Soy " + this.nombre + " " + this.apellido + " Y no estoy retirado");
         }
     }
-    public void ageDiference(int age){
-        if(age > this.edad){
-            System.out.println("La diferencia es de " + (age-this.edad) + " años");
-        }
-        else if (this.edad > age){
-            System.out.println("La diferencia es de " + (this.edad-age) + " años");
-        }
-        else{
-            System.out.println("La edad es la misma ");
-        }
+    public void ageDiference(Persona p){
+        int diferencia = Math.abs(this.edad-p.edad);
+        System.out.println("La diferencia de edad es " + diferencia);
     }
     public static void checkDNI(String dni){
         if(dni.length() == MAXDNILENGTH){
@@ -87,9 +80,6 @@ public class Persona {
         }else{
             System.out.println("La edad es invalida");
         }
-    }
-    public void setDni(String dni){
-        this.dni=dni;
     }
     public void setNombre(String nombre){
         this.nombre=nombre;

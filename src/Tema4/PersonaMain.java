@@ -8,7 +8,7 @@ public class PersonaMain {
         persona2.isAdult();
         persona.isRetired();
         persona2.isRetired();
-        persona.ageDiference(13);
+        persona.ageDiference(persona2);
         Persona.checkDNI("Y00000000");
         System.out.println(persona);
         System.out.println(persona2);
