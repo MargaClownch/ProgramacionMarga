@@ -1,43 +1,100 @@
 package Tema4;
 
 public class Persona {
+    // Atributos
+    private String dni;
     private String nombre;
+    private String apellido;
     private int edad;
-    public static final int edadBase = 0;
+    public static final String DNIBASE = "00000000X";
+    public static final String NOMBREBASE ="Marga";
+    public static final String APELLIDOBASE = "Zaharía";
+    public static final int EDADBASE = 26;
+    public static final int ADULTAGE = 18;
+    public static final int RETIREDAGE = 65;
+    public static final int MAXDNILENGTH = 9;
+    // Constructores
     public Persona(){
-        this.nombre = "Marga";
-        this.edad = edadBase;
+        this.dni=DNIBASE;
+        this.nombre=NOMBREBASE;
+        this.apellido=APELLIDOBASE;
+        this.edad=EDADBASE;
     }
-    public Persona(String nombre){
-        this.nombre = nombre;
-        this.edad = edadBase;
+    public Persona(String dni,String nombre,String apellido,int edad){
+        this.dni=dni;
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.edad=edad;
     }
-    public Persona(String nombre, int edad){
-        this.nombre = nombre;
-        this.edad = edad;
+    // Métodos
+    public String toString(){
+        return this.dni+" "+this.nombre+" "+this.apellido+" "+this.edad;
     }
-    public void saludar() {
-        System.out.println("Hola!");
+    public void print(){
+        System.out.println("Mi dni es " + this.dni);
+        System.out.println("Mi nombre es " + this.nombre);
+        System.out.println("Mi apellido es " + this.apellido);
+        System.out.println("Mi edad es " + this.edad);
     }
-    public void presentarme() {
-        System.out.println("Soy " + nombre + " " + edad + " años.");
+    public void isAdult(){
+        if(this.edad >= ADULTAGE){
+            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y soy adulto");
+        } else{
+            System.out.println("Soy " + this.nombre + this.apellido + " Y soy menor");
+        }
     }
-    public void saludarA(String nombre) {
-        System.out.println("Hola " + nombre + "!");
+    public void isRetired(){
+        if(this.edad >= RETIREDAGE){
+            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y estoy retirado");
+        } else{
+            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y no estoy retirado");
+        }
     }
-    public static void showInfo(){
-        System.out.println("Las personas tienen edad y nombre");
+    public void ageDiference(int age){
+        if(age > this.edad){
+            System.out.println("La diferencia es de " + (age-this.edad) + " años");
+        }
+        else if (this.edad > age){
+            System.out.println("La diferencia es de " + (this.edad-age) + " años");
+        }
+        else{
+            System.out.println("La edad es la misma ");
+        }
     }
+    public static void checkDNI(String dni){
+        if(dni.length() == MAXDNILENGTH){
+            System.out.println("El dni es valido");
+        }else{
+            System.out.println("El dni es invalido");
+        }
+    }
+    // Setters y Getters
     public int getEdad(){
-        return edad;
+        return this.edad;
     }
-    public void setEdad(int edad){
-        this.edad = edad;
+    public String getDni(){
+        return this.dni;
     }
     public String getNombre(){
-        return nombre;
+        return this.nombre;
+    }
+    public String getApellido(){
+        return this.apellido;
+    }
+    public void setEdad(int edad){
+        if(this.edad >= 0 && this.edad <= 123){
+        this.edad = edad;
+        }else{
+            System.out.println("La edad es invalida");
+        }
+    }
+    public void setDni(String dni){
+        this.dni=dni;
     }
     public void setNombre(String nombre){
-        this.nombre = nombre;
+        this.nombre=nombre;
+    }
+    public void setApellido(String apellido){
+        this.apellido=apellido;
     }
 }

@@ -40,7 +40,6 @@ public class Reloj {
             System.out.println("Segundo: " + this.segundo + "AM");
         }
     }
-    @Override
     public String toString(){
         if (!this.ampm) {
             return this.hora + ":" + this.minuto + ":" + this.segundo;
