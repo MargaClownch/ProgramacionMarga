@@ -19,7 +19,13 @@ public class Hero {
     // Constructores
 
     public Hero(){
-
+        this.name = "Enemigo";
+        this.level = 1;
+        this.health = 30;
+        this.maxHealth = 30;
+        this.experience = 0;
+        this.attack = 5;
+        this.defense = 5;
     }
     public Hero(String name, int level, int health, int maxHealth, int experience, int attack, int defense) {
         this.name = name;
@@ -30,7 +36,9 @@ public class Hero {
         this.attack = attack;
         this.defense = defense;
     }
+
     // Métodos
+
     public int drinkPotion(){
         return this.health + POTIONHEALING;
     }
@@ -38,7 +46,7 @@ public class Hero {
         return this.health + RESTHEALING;
     }
     public String toString(){
-        return name + " " + level + " " + health + " " + maxHealth + " " + experience + " " + attack + " " + defense;
+        return this.name + " " + this.level + " " + this.health + " " + this.maxHealth + " " + this.experience + " " + this.attack + " " + this.defense;
     }
     public void levelUP(){
         this.level = this.level + 1;
@@ -47,12 +55,13 @@ public class Hero {
         this.defense = this.defense + 1;
     }
     public void attack(Hero h){
-        h.health = h.health - (rand.nextInt(this.attack) - h.defense);
+        h.health = h.health - (rand.nextInt(this.attack) - h.defense + 1);
         this.experience = this.experience + 10;
         if(this.experience >= LEVELUP){
-            this.experience = this.experience - 50;
+            this.experience = this.experience - LEVELUP;
             levelUP();
         }
+        System.out.println("He atacado");
     }
 
     //Setters y Getter
