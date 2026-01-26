@@ -11,6 +11,7 @@ public class Hero {
     private int experience;
     private int attack;
     private int defense;
+    private int damage;
     public static final String NAMEBASE = "Pepe";
     public static final int LEVELBASE = 1;
     public static final int HEALTHBASE = 20;
@@ -46,14 +47,12 @@ public class Hero {
 
     // Métodos
 
-    public int drinkPotion(){
-        return this.health + POTIONHEALING;
-    }
-    public int rest(){
-        return this.health + RESTHEALING;
-    }
-    public String toString(){
-        return this.name + " " + this.level + " " + this.health + " " + this.maxHealth + " " + this.experience + " " + this.attack + " " + this.defense;
+    public void drinkPotion() {
+        this.health = this.health + POTIONHEALING;
+        if (this.health > this.maxHealth) {
+            this.health = this.maxHealth;
+        }
+        System.out.println(this.name + " se ha curado. Salud actual: " + this.health);
     }
     public void levelUP(){
         this.level = this.level + 1;
@@ -62,13 +61,17 @@ public class Hero {
         this.defense = this.defense + 1;
     }
     public void attack(Hero h){
-        h.health = h.health - (rand.nextInt(this.attack) - h.defense + 1);
+        damage = rand.nextInt(this.attack) - h.defense + 1;
+        if (damage < 0) {
+            damage = 0;
+        }
+        h.health = h.health - damage;
         this.experience = this.experience + 10;
         if(this.experience >= LEVELUP){
             this.experience = this.experience - LEVELUP;
             levelUP();
         }
-        System.out.println("He atacado");
+        System.out.println("El ataque ha infligido " + damage + " de daño.");
     }
 
     //Setters y Getter

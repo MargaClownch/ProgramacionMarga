@@ -1,19 +1,52 @@
 package Tema4;
-
-import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class HeroMain {
     public static void main(String[] args) {
-        final double POTIONFIND = 0.1;
-        final double REST = 0.001;
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        final int POTIONFIND = 10;
+        final int REST = 1000;
         int wave = 0;
-        Hero Marga = new Hero("Marga",1,100,100,0,10,10);
-        Hero[] Enemigos = new Hero[3];
-        Enemigos[0] = new Hero("Charly",1,25,25,0,3,2);
-        Enemigos[1] = new Hero("Carlos",1,30,30,0,5,4);
-        Enemigos[2] = new Hero("Samper",1,40,40,0,10,6);
-        for (int i = 0; i < Enemigos.length; i++) {
-            System.out.println(Enemigos[i]);
+        Hero heroe = new Hero("Marga",1,100,100,0,10,10);
+
+        System.out.println("Comienza el juego!! Sí tu personaje tiene estadisticas determinadas recuerda cambiarlo dentro del objeto Hero!");
+        System.out.println("Tu personaje es " + heroe);
+
+        while(heroe.getHealth()>0) {
+            wave++;
+            System.out.println("Llega la oleada número " + wave + "!!");
+            int enemy = rand.nextInt(3) + 1;
+            Hero[] enemies = new Hero[enemy];
+
+            for (int i = 0; i < enemies.length;i++){
+                enemies[i] = new Hero("Goblin " + (i + 1), 1, 15, 15, 0, 5, 2);
+            }
+            System.out.println("Han aparecido " + enemy + "enemigos!");
+            boolean enemiesAlive = true;
+
+            while (heroe.getHealth()>0 && enemiesAlive){
+
+                for (int i = 0; i <enemies.length; i++){
+                    if (enemies[i].getHealth() >0){
+                        if (rand.nextInt(10) == 0){
+                            System.out.println("El goblin ha huido ante tu temible presencia");
+                            enemies[i].setHealth(0);
+                        }
+                    }
+                }
+                boolean turnAttack = false;
+                for (int i = 0; i < enemies.length; i++){
+                    if (enemies[i].getHealth() > 0){
+                        System.out.println("Atacas a " + enemies[i].getName());
+                        heroe.attack(enemies[i]);
+                        turnAttack = true;
+                        break;
+                    }
+                }
+
+            }
         }
     }
 }
