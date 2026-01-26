@@ -11,6 +11,13 @@ public class Hero {
     private int experience;
     private int attack;
     private int defense;
+    public static final String NAMEBASE = "Pepe";
+    public static final int LEVELBASE = 1;
+    public static final int HEALTHBASE = 20;
+    public static final int MAXHEALTHBASE = 20;
+    public static final int EXPERIENCEBASE = 0;
+    public static final int ATTACKBASE = 10;
+    public static final int DEFENSEBASE = 10;
     public static final int POTIONHEALING = 10;
     public static final int RESTHEALING = 50;
     public static final int LEVELUP = 50;
@@ -19,13 +26,13 @@ public class Hero {
     // Constructores
 
     public Hero(){
-        this.name = "Enemigo";
-        this.level = 1;
-        this.health = 30;
-        this.maxHealth = 30;
-        this.experience = 0;
-        this.attack = 5;
-        this.defense = 5;
+        this.name = NAMEBASE;
+        this.level = LEVELBASE;
+        this.health = HEALTHBASE;
+        this.maxHealth = MAXHEALTHBASE;
+        this.experience = EXPERIENCEBASE;
+        this.attack = ATTACKBASE;
+        this.defense = DEFENSEBASE;
     }
     public Hero(String name, int level, int health, int maxHealth, int experience, int attack, int defense) {
         this.name = name;
