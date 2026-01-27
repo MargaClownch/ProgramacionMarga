@@ -52,7 +52,8 @@ public class Hero {
         if (this.health > this.maxHealth) {
             this.health = this.maxHealth;
         }
-        System.out.println(this.name + " se ha curado. Salud actual: " + this.health);
+        System.out.println(this.name + " Ha bebido una poción y se ha curado");
+        System.out.println("Salud actual: " + this.health + "/" + this.maxHealth);
     }
     public void levelUP(){
         this.level = this.level + 1;
@@ -72,6 +73,14 @@ public class Hero {
             levelUP();
         }
         System.out.println("El ataque ha infligido " + damage + " de daño.");
+    }
+    public void rest() {
+        this.health += RESTHEALING;
+        if (this.health > this.maxHealth) {
+            this.health = this.maxHealth;
+        }
+        System.out.println(this.name + " se ha echado una siesta. Salud recuperada.");
+        System.out.println("Salud actual: " + this.health + "/" + this.maxHealth);
     }
 
     //Setters y Getter
