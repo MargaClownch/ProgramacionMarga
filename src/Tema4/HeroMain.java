@@ -40,12 +40,10 @@ public class HeroMain {
                 }
 
                 // Ataque del jugador
-                boolean turnAttack = false;
                 for (int i = 0; i < enemies.length; i++) {
                     if (enemies[i].getHealth() > 0) {
                         System.out.println("Atacas a " + enemies[i].getName());
                         heroe.attack(enemies[i]);
-                        turnAttack = true;
                         break;
                     }
                 }
@@ -64,7 +62,7 @@ public class HeroMain {
                     System.out.println("   [Tu Vida: " + heroe.getHealth() + "/" + heroe.getMaxHealth() + "]");
                 }
             }
-                // Sí se resuelven los bucles anteriores se revisa que el heroe siga vivo y se aplican las habilidades
+                // Al resolverse los bucles anteriores se revisa que el heroe siga vivo y se aplican las habilidades
                 if (heroe.getHealth() > 0) {
                     System.out.println("Horda eliminada");
 
@@ -86,4 +84,3 @@ public class HeroMain {
         System.out.println("Tu héroe murió luchando con honor.");
     }
 }
-

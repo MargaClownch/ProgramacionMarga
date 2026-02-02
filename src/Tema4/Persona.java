@@ -36,18 +36,24 @@ public class Persona {
         System.out.println("Mi apellido es " + this.apellido);
         System.out.println("Mi edad es " + this.edad);
     }
-    public void isAdult(){
+    public boolean isAdult(){
+
         if(this.edad >= ADULTAGE){
-            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y soy adulto");
+            return true;
         } else{
-            System.out.println("Soy " + this.nombre + this.apellido + " Y soy menor");
+            return false;
         }
+        //return
+        //return this.edad >= ADULTAGE;
+
     }
-    public void isRetired(){
+
+
+    public boolean isRetired(){
         if(this.edad >= RETIREDAGE){
-            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y estoy retirado");
+            return true;
         } else{
-            System.out.println("Soy " + this.nombre + " " + this.apellido + " Y no estoy retirado");
+            return false;
         }
     }
     public void ageDiference(Persona p){
@@ -75,7 +81,7 @@ public class Persona {
         return this.apellido;
     }
     public void setEdad(int edad){
-        if(this.edad >= 0 && this.edad <= 123){
+        if(edad >= 0 && this.edad <= 123){
         this.edad = edad;
         }else{
             System.out.println("La edad es invalida");

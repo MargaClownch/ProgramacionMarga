@@ -46,6 +46,10 @@ public class Hero {
     }
 
     // Métodos
+    @Override
+    public String toString(){
+        return this.name + " "  + this.level + " " + this.health + " " + this.maxHealth + " " + this.experience + " " + this.attack + " "  + this.defense;
+    }
 
     public void drinkPotion() {
         this.health = this.health + POTIONHEALING;
