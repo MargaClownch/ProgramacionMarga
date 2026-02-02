@@ -37,24 +37,23 @@ public class Persona {
         System.out.println("Mi edad es " + this.edad);
     }
     public boolean isAdult(){
-
+        boolean trufa;
         if(this.edad >= ADULTAGE){
-            return true;
+            trufa = true;
         } else{
-            return false;
+            trufa = false;
         }
-        //return
+        return trufa;
         //return this.edad >= ADULTAGE;
-
     }
-
-
     public boolean isRetired(){
+        boolean trufa;
         if(this.edad >= RETIREDAGE){
-            return true;
+            trufa = true;
         } else{
-            return false;
+            trufa = false;
         }
+        return trufa;
     }
     public void ageDiference(Persona p){
         int diferencia = Math.abs(this.edad-p.edad);
