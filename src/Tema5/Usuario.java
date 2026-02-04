@@ -24,7 +24,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", edad=" + edad + '}';
+        return "Usuario{" + " nombre=" + nombre + ", edad=" + edad + '}';
     }
 
     // Setters y Getters
