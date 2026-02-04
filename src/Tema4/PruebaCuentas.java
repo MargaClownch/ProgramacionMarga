@@ -8,6 +8,7 @@ public class PruebaCuentas {
     static PersonaCuenta[] listadoPersonas = new PersonaCuenta[10];
     static int totalPersonas = 0;
 
+
     public static void main(String[] args) {
         int opcion;
         do {
