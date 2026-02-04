@@ -9,8 +9,6 @@ public class Usuario {
     public static final String NOMBRE_BASE = "Diana";
     public static final int EDAD_BASE = 17;
 
-
-
     // Contructores
 
     public void Usuario() {
