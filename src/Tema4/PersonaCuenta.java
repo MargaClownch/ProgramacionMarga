@@ -5,8 +5,8 @@ public class PersonaCuenta {
     // Atributos
 
     private String dni;
-    private int [] cuentas = new int[3];
-    private int cuenta;
+    private Cuenta [] cuentas ;
+    private int contadorCuentas;
     public static final int CUENTA_BASE = 1001;
     public static final String DNI_BASE = "X0000000";
 
@@ -15,47 +15,66 @@ public class PersonaCuenta {
 
     public PersonaCuenta() {
         dni = DNI_BASE;
-        cuenta = CUENTA_BASE;
+
     }
-    public PersonaCuenta(String dni, int cuenta) {
+    public PersonaCuenta(String dni) {
         this.dni = dni;
-        this.cuenta = cuenta;
+        this.cuentas = new Cuenta[3];
+        this.contadorCuentas = 0;
     }
 
     // Métodos
 
-    public void moroso(){
-
-    }
-    public void addCuenta(int cuenta){
-        if(cuenta < 3){
-        cuentas[cuenta]++;
+    public boolean esMorosa() {
+        for (int i = 0; i < contadorCuentas; i++) {
+            if (cuentas[i].getSaldo() < 0) {
+                return true;
+            }
         }
+        return false;
+    }
+    public void anadirCuenta(Cuenta newCuenta) {
+        if (contadorCuentas < 3) {
+            cuentas[contadorCuentas] = newCuenta;
+            contadorCuentas++;
+            System.out.println("Cuenta añadida con éxito.");
+        } else {
+            System.out.println("Error: Esta persona ya tiene el máximo de 3 cuentas.");
+        }
+    }
+    @Override
+    public String toString() {
+        String info = "Cliente DNI: " + dni + "\n";
+        for (int i = 0; i < contadorCuentas; i++) {
+            info += " --> " + cuentas[i].toString() + "\n";
+        }
+        return info;
     }
 
     // Setters y getters
+
 
     public String getDni() {
         return dni;
     }
 
-    public int getCuenta() {
-        return cuenta;
+    public Cuenta[] getCuentas() {
+        return cuentas;
     }
 
-    public int[] getCuentas() {
-        return cuentas;
+    public int getContadorCuentas() {
+        return contadorCuentas;
+    }
+
+    public void setCuentas(Cuenta[] cuentas) {
+        this.cuentas = cuentas;
     }
 
     public void setDni(String dni) {
         this.dni = dni;
     }
 
-    public void setCuentas(int[] cuentas) {
-        this.cuentas = cuentas;
-    }
-
-    public void setCuenta(int cuenta) {
-        this.cuenta = cuenta;
+    public void setContadorCuentas(int contadorCuentas) {
+        this.contadorCuentas = contadorCuentas;
     }
 }

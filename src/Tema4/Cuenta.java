@@ -2,9 +2,9 @@ package Tema4;
 
 public class Cuenta {
     // Atributos
-    private int numeroCuenta;
+    private String numeroCuenta;
     private double saldo;
-    public static final int NUMERO_CUENTA_BASE = 1012;
+    public static final String NUMERO_CUENTA_BASE = "1012";
     public static final double SALDO_BASE = 0.01;
     public static final double ABONO_MINIMO = 0.19;
     public static final double RECIBO_MINIMO = 0.00;
@@ -16,7 +16,7 @@ public class Cuenta {
         this.numeroCuenta = NUMERO_CUENTA_BASE;
     }
 
-    public Cuenta(int numeroCuenta, double saldo) {
+    public Cuenta(String numeroCuenta, double saldo) {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
     }
@@ -48,15 +48,16 @@ public class Cuenta {
 
     // Setters y Getters
 
-    public int getNumeroCuenta() {
-        return numeroCuenta;
-    }
 
     public double getSaldo() {
         return saldo;
     }
 
-    public void setNumeroCuenta(int numeroCuenta) {
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
     }
 
