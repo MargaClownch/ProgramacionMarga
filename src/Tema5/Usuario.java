@@ -9,13 +9,15 @@ public class Usuario {
     public static final String NOMBRE_BASE = "Diana";
     public static final int EDAD_BASE = 17;
 
+
+
     // Contructores
 
     public void Usuario() {
         this.nombre = NOMBRE_BASE;
         this.edad = EDAD_BASE;
     }
-    public void Usuario(String nombre, int edad) {
+    public Usuario(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
