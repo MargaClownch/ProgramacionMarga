@@ -7,6 +7,8 @@ public class Gimnasio {
         HashMap<String, Usuario> miembro = new HashMap<String, Usuario>();
         int opcion;
         String dni;
+        String nombre;
+        int edad;
         Scanner sc = new Scanner(System.in);
 
         do {
@@ -23,9 +25,9 @@ public class Gimnasio {
                     System.out.println("Introduce en DNI del usuario");
                     dni  = sc.nextLine();
                     System.out.println("Introduce el Nombre del usuario");
-                    String nombre = sc.nextLine();
+                    nombre = sc.nextLine();
                     System.out.println("Introduce la edad del usuario");
-                    int edad = sc.nextInt();
+                    edad = sc.nextInt();
                     Usuario nuevoUsuario = new Usuario(nombre, edad);
                     miembro.put(dni, nuevoUsuario);
                     System.out.println("Datos de usuario guardados correctamente");

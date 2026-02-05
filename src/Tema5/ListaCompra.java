@@ -7,13 +7,19 @@ import java.util.Set;
 public class ListaCompra {
     public static void main(String[] args) {
         Set<String> compra = new HashSet<String>();
+        Set<String> carro = new HashSet<String>();
         int opcion;
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.println("1. Añadir objeto a la compra");
-            System.out.println("2. Eliminar objeto de la compra");
+            System.out.println("1. Añadir objeto a la lista de la compra");
+            System.out.println("2. Eliminar objeto de la lista de la compra");
             System.out.println("3. Mostrar lista de la compra");
-            System.out.println("4. Salir");
+            System.out.println("4. Añadir producto al carro");
+            System.out.println("5. Mostrar productos faltantes");
+            System.out.println("6. Salir");
+            compra.add("macarrones");
+            compra.add("pizza");
+            compra.add("pimiento");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -41,6 +47,23 @@ public class ListaCompra {
                     break;
 
                 case 4:
+                    System.out.println("Introduce el objeto de la compra");
+                    if (carro.add(sc.nextLine().toLowerCase()) == false) {
+                        System.out.println("Error: el producto ya estaba en la lista (Producto duplicado).");
+                    } else {
+                        System.out.println("El producto ha sido añadido correctamente.");
+                    }
+                    break;
+
+                case 5:
+                    Set<String> faltantes = new HashSet<>(compra);
+                    faltantes.removeAll(carro);
+                    for (String f : faltantes) {
+                        System.out.println(f);
+                    }
+                    break;
+
+                case 6:
                     System.out.println("Gracias por usar el programa!");
                     break;
 
