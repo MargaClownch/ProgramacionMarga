@@ -31,6 +31,9 @@ public class Gimnasio {
                     Usuario nuevoUsuario = new Usuario(nombre, edad);
                     miembro.put(dni, nuevoUsuario);
                     System.out.println("Datos de usuario guardados correctamente");
+                    for(HashMap.Entry<String, Usuario> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
+                    }
                     break;
 
                 case 2:
@@ -38,6 +41,9 @@ public class Gimnasio {
                     dni = sc.nextLine();
                     miembro.remove(dni);
                     System.out.println("Datos de usuario eliminados correctamente");
+                    for(HashMap.Entry<String, Usuario> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
+                    }
                     break;
 
                 case 3:
@@ -47,6 +53,9 @@ public class Gimnasio {
                         System.out.println(miembro.get(dni));
                     } else{
                         System.out.println("No existe el usuario que quieres mostrar");
+                    }
+                    for(HashMap.Entry<String, Usuario> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
                     }
                     break;
 
@@ -60,6 +69,9 @@ public class Gimnasio {
                     nuevoUsuario = new Usuario(nombre, edad);
                     miembro.put(dni, nuevoUsuario);
                     System.out.println("Datos de usuario cambiados correctamente");
+                    for(HashMap.Entry<String, Usuario> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
+                    }
                     break;
 
                 case 5:

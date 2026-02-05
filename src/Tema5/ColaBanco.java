@@ -1,6 +1,8 @@
 package Tema5;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class ColaBanco {
@@ -9,6 +11,8 @@ public class ColaBanco {
         int posicion = 0;
         Scanner sc = new Scanner(System.in);
         HashMap<Integer, UsuarioBanco> miembro = new HashMap<Integer, UsuarioBanco>();
+        //Queue
+        LinkedList<UsuarioBanco> que = new LinkedList<UsuarioBanco>();
 
         do {
             System.out.println("1. Añadir al último a la cola");
@@ -30,12 +34,18 @@ public class ColaBanco {
                     miembro.put(posicion, nuevoUsuario);
                     posicion++;
                     System.out.println("El usuario ha sido añadido a la cola en la posicion " + posicion);
+                    for(HashMap.Entry<Integer, UsuarioBanco> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
+                    }
                     break;
 
                 case 2:
                     System.out.println("El primer usuario ha abandonado la cola");
-                    miembro.remove(1);
+                    miembro.remove(0);
                     posicion--;
+                    for(HashMap.Entry<Integer, UsuarioBanco> x : miembro.entrySet()){
+                        System.out.println(x.getKey() + " - " + x.getValue());
+                    }
                     break;
                 case 3:
                     System.out.println("introduce el numero de cola que ha abandonado: ");

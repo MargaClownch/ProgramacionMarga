@@ -10,6 +10,10 @@ public class ListaCompra {
         Set<String> carro = new HashSet<String>();
         int opcion;
         Scanner sc = new Scanner(System.in);
+        compra.add("macarrones");
+        compra.add("pizza");
+        compra.add("pimiento");
+
         do {
             System.out.println("1. Añadir objeto a la lista de la compra");
             System.out.println("2. Eliminar objeto de la lista de la compra");
@@ -17,9 +21,7 @@ public class ListaCompra {
             System.out.println("4. Añadir producto al carro");
             System.out.println("5. Mostrar productos faltantes");
             System.out.println("6. Salir");
-            compra.add("macarrones");
-            compra.add("pizza");
-            compra.add("pimiento");
+
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -32,11 +34,19 @@ public class ListaCompra {
                     } else {
                         System.out.println("El producto ha sido añadido correctamente.");
                     }
+                    for(String a: compra) {
+                        System.out.println(a);
+                    }
+
+
                     break;
 
                 case 2:
                     System.out.println("Introduce el objeto que quieras eliminar");
                     compra.remove(sc.nextLine());
+                    for(String a: compra) {
+                        System.out.println(a);
+                    }
                     break;
 
                 case 3:
@@ -44,6 +54,9 @@ public class ListaCompra {
                         System.out.println(c);
                     }
                     System.out.println("Lista de la compra " + compra.size());
+                    for(String a: compra) {
+                        System.out.println(a);
+                    }
                     break;
 
                 case 4:
@@ -52,6 +65,9 @@ public class ListaCompra {
                         System.out.println("Error: el producto ya estaba en la lista (Producto duplicado).");
                     } else {
                         System.out.println("El producto ha sido añadido correctamente.");
+                    }
+                    for(String a: compra) {
+                        System.out.println(a);
                     }
                     break;
 
@@ -70,6 +86,6 @@ public class ListaCompra {
                 default:
                     System.out.println("Error opción no permitida");
             }
-        } while (opcion != 4);
+        } while (opcion != 6);
     }
 }
