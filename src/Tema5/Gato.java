@@ -3,6 +3,7 @@ package Tema5;
 public class Gato {
     private String nombre;
     private int edad;
+
     public static final String NOMBRE_BASE = "Diana";
     public static final int EDAD_BASE = 17;
     public static final int EDAD_MINIMA = 0;
@@ -45,5 +46,4 @@ public class Gato {
         }
         this.edad = edad;
     }
-
 }

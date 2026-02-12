@@ -1,4 +1,4 @@
-package tema5;
+package Tema5;
 
 import java.util.InputMismatchException;
 import java.util.Random;

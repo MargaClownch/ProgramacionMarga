@@ -1,7 +1,8 @@
-package tema5;
+package Tema5;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class Tema5Ejercicio1 {
     public static void main(String[] args) {
