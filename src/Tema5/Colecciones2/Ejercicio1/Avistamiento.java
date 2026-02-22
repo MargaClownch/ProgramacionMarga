@@ -1,4 +1,4 @@
-package Tema5.Colecciones2;
+package Tema5.Colecciones2.Ejercicio1;
 
 public class Avistamiento {
     private int hora;

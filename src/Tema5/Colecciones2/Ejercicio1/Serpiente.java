@@ -1,6 +1,6 @@
-package Tema5.Colecciones2;
+package Tema5.Colecciones2.Ejercicio1;
 
-public class Serpiente extends Avistamiento{
+public class Serpiente extends Avistamiento {
 
     private double longitud;
     private String especie;

@@ -1,6 +1,6 @@
-package Tema5.Colecciones2;
+package Tema5.Colecciones2.Ejercicio1;
 
-public class ManadaLobos extends Avistamiento{
+public class ManadaLobos extends Avistamiento {
     private int numeroLobos;
     private String observaciones;
     public static final int NUMERO_LOBOS_BASE = 2;

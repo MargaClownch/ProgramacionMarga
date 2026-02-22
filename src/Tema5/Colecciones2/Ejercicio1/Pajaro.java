@@ -1,6 +1,6 @@
-package Tema5.Colecciones2;
+package Tema5.Colecciones2.Ejercicio1;
 
-public class Pajaro extends Avistamiento{
+public class Pajaro extends Avistamiento {
     private double peso;
     private String especie;
     public static final double PESO_BASE = 1.00;
