@@ -12,12 +12,12 @@ public class PruebaCuentas {
     public static void main(String[] args) {
         int opcion;
         do {
-            System.out.println("1. Crear nueva Persona");
-            System.out.println("2. Crear nueva Cuenta y asignarla a una Persona");
+            System.out.println("1. Crear nueva persona");
+            System.out.println("2. Crear nueva Cuenta y asignarla a una persona");
             System.out.println("3. Mostrar datos de una persona");
-            System.out.println("4. Recibir Abono (Nómina/Ingreso)");
-            System.out.println("5. Pagar Recibo");
-            System.out.println("6. Realizar Transferencia");
+            System.out.println("4. Recibir nomina");
+            System.out.println("5. Pagar recibo");
+            System.out.println("6. Realizar transferencia");
             System.out.println("7. Mostrar personas morosas");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
@@ -36,7 +36,7 @@ public class PruebaCuentas {
                     mostrarDatosPersona();
                     break;
                 case 4:
-                    realizarAbono();
+                    recibirNomina();
                     break;
                 case 5:
                     realizarPago();
@@ -100,7 +100,7 @@ public class PruebaCuentas {
     }
 
     // Recibir Abono
-    public static void realizarAbono() {
+    public static void recibirNomina() {
         System.out.print("DNI del titular: ");
         String dni = sc.nextLine();
         PersonaCuenta p = buscarPersonaPorDni(dni);
@@ -197,7 +197,7 @@ public class PruebaCuentas {
             System.out.println("No hay morosos en el sistema (O el sistema no permite saldos negativos).");
         }
     }
-
+    // Me ha ayudado aquí también el chaty
     public static PersonaCuenta buscarPersonaPorDni(String dni) {
         for (int i = 0; i < totalPersonas; i++) {
             if (listadoPersonas[i].getDni().equalsIgnoreCase(dni)) {

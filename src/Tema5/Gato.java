@@ -10,7 +10,7 @@ public class Gato {
     public static final int LONGITUD_NOMBRE_MINIMA = 3;
 
     // Constructores
-    public Gato(){
+    public Gato() throws Exception{
         this.nombre = NOMBRE_BASE;
         this.edad = EDAD_BASE;
     }

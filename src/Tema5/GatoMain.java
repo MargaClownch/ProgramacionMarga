@@ -13,6 +13,7 @@ public class GatoMain {
             e.printStackTrace();
         }
         System.out.println("---Separador---");
+        
         // Nombre corto
         try {
             System.out.println("Creando a un gato con nombre corto...");
@@ -24,6 +25,7 @@ public class GatoMain {
             e.printStackTrace();
         }
         System.out.println("---Separador---");
+
         // Edad negativa
         try {
             System.out.println("Creando gato y cambiando edad a negativa...");

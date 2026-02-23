@@ -50,7 +50,7 @@ public class RoundRobin {
                 System.out.println("CPU inactiva, esperando procesos...");
             }
 
-            // Avanzamos el reloj de nuestro simulador
+            // Avanzamos el reloj
             tiempoTotal = tiempoTotal + 0.2;
 
             try {
