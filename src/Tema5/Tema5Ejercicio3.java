@@ -1,4 +1,4 @@
-package tema5;
+package Tema5;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -23,7 +23,6 @@ public class Tema5Ejercicio3 {
                 e.printStackTrace();
             }
         }
-
         System.out.println("¡Vector rellenado!");
         System.out.println(Arrays.toString(vector));
     }

@@ -3,19 +3,22 @@ package Tema5;
 public class Gato {
     private String nombre;
     private int edad;
+
     public static final String NOMBRE_BASE = "Diana";
     public static final int EDAD_BASE = 17;
     public static final int EDAD_MINIMA = 0;
     public static final int LONGITUD_NOMBRE_MINIMA = 3;
 
     // Constructores
-    public Gato(){
+    public Gato() throws Exception{
         this.nombre = NOMBRE_BASE;
         this.edad = EDAD_BASE;
     }
     public Gato(String nombre, int edad) throws Exception {
-        this.nombre = nombre;
-        this.edad = edad;
+        //this.nombre = nombre;
+        //this.edad = edad;
+        this.setNombre(nombre);
+        this.setEdad(edad);
     }
 
     // Métodos
@@ -45,5 +48,4 @@ public class Gato {
         }
         this.edad = edad;
     }
-
 }

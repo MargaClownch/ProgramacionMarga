@@ -1,4 +1,4 @@
-package tema5;
+package Tema5;
 
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -8,12 +8,9 @@ public class Tema5Ejercicio4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
-
-        // Tamaño aleatorio entre 1 y 100
         int n = rand.nextInt(100) + 1;
         int[] vector = new int[n];
 
-        // Rellenamos con valores aleatorios (1-10)
         for (int i = 0; i < vector.length; i++) {
             vector[i] = rand.nextInt(10) + 1;
         }
