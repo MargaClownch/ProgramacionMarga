@@ -66,12 +66,12 @@ public class PersonaCuenta {
         return contadorCuentas;
     }
 
-    public void setCuentas(Cuenta[] cuentas) {
-        this.cuentas = cuentas;
-    }
-
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public void setCuentas(Cuenta[] cuentas) {
+        this.cuentas = cuentas;
     }
 
     public void setContadorCuentas(int contadorCuentas) {
