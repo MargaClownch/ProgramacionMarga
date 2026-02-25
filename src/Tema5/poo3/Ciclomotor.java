@@ -27,5 +27,4 @@ public class Ciclomotor extends Vehiculo {
     public int getCilindrada() { return cilindrada; }
     public void setCilindrada(int cilindrada) { this.cilindrada = cilindrada; }
 
-
 }
