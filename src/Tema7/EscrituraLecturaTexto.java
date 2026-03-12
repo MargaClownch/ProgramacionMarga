@@ -1,4 +1,4 @@
-package tema7;
+package Tema7;
 
 import java.io.*;
 import java.nio.file.Files;
