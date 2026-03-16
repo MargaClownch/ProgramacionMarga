@@ -12,7 +12,6 @@ public class EjercicioB1 {
         try {
            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
                 String line;
-
                 int max = 0;
                 int min = 999999999;
                 while((line = br.readLine()) != null) {

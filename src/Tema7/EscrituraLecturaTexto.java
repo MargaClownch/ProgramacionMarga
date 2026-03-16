@@ -13,7 +13,6 @@ public class EscrituraLecturaTexto {
         String fileName1 = "/Users/anavicianofabregat/Desktop/datosAna.txt";
         Path filePath = Paths.get("datosAna.txt");
 
-
         //Files.writeString
         try {
             //Escribe contenido al fichero, borrando todo lo que haya
