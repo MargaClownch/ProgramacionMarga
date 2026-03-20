@@ -2,7 +2,7 @@ package Tema7;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections; // Importante para ordenar
+import java.util.Collections;
 import java.util.Scanner;
 
 public class EjercicioB3 {
