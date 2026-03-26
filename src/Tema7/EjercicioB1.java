@@ -1,5 +1,4 @@
 package Tema7;
-
 import java.io.*;
 
 public class EjercicioB1 {
