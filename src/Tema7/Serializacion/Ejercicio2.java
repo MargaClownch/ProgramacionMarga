@@ -9,7 +9,7 @@ public class Ejercicio2 {
         try (BufferedReader br = new BufferedReader(new FileReader("Resources/usuario.txt"))) {
             String linea;
 
-            // br.readLine() lee una línea entera. Cuando llega al final del archivo, devuelve null.
+            //br.readLine() lee una línea entera. Cuando llega al final del archivo, devuelve null.
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
             }

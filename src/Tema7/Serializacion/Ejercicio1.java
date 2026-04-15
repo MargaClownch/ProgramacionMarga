@@ -14,7 +14,7 @@ public class Ejercicio1 {
         System.out.print("Introduce tu edad: ");
         int edad = sc.nextInt();
 
-        // No hay true al final asi que reescribirá el archivo cada vez
+        //No hay true al final asi que reescribirá el archivo cada vez
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("Resources/usuario.txt"))) {
 
             bw.write("Nombre: " + nombre);

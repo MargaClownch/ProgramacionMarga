@@ -13,7 +13,7 @@ public class Ejercicio3 {
             String linea;
 
             while ((linea = br.readLine()) != null) {
-                // Limpiamos los espacios por delante y por detrás
+                // Limpiamos los espacios por delante y por detrás con nuestro amigo el trimmy
                 linea = linea.trim();
 
                 // Si la línea no está completamente vacía, contamos sus palabras
