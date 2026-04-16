@@ -9,10 +9,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FunkoReader {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         cargarFunkos();
         int opcion;
-        Scanner sc = new Scanner(System.in);
+
         do {
             showMenu();
             opcion = sc.nextInt();
@@ -90,5 +91,14 @@ public class FunkoReader {
         catch (DateTimeParseException e){
             System.out.println("Error en la fecha del csv");
         }
+    }
+    public static void addFunko(){
+        String cod = sc.nextLine();
+        String nombre = sc.nextLine();
+        String modelo = sc.nextLine();
+        double precio = Double.parseDouble(datos[3].trim());
+        LocalDate fechaLanzamiento = LocalDate.parse(datos[4].trim());
+        Funko nuevoFunko = new Funko(cod, nombre, modelo, precio, fechaLanzamiento);
+        listaFunkos.add(nuevoFunko);
     }
 }
