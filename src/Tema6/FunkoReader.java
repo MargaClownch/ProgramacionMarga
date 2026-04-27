@@ -90,7 +90,7 @@ public class FunkoReader {
                     }
                     break;
                 case 5:
-                    System.out.println("\n--- 📈 MEDIA DE PRECIO ---");
+                    System.out.println("\n--- MEDIA DE PRECIO ---");
 
                     if (listaFunkos.isEmpty()) {
                         System.out.println("Tu colección está vacía");
