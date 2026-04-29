@@ -105,6 +105,7 @@ public class FunkoReader {
                     break;
                 case 6:
                     // No se la verdad como hacer esto, espero que no entre en el exámen
+                    System.out.println("WORK IN PROGRESS");
                     break;
                 case 7:
                     System.out.println("\n--- NOVEDADES DEL 2023 ---");
